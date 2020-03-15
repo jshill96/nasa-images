@@ -1,32 +1,23 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" class="d-flex flex-column">
+    <nav id="nav" class="navbar navbar-dark bg-primary">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <router-link class="nav-link" to="/">Search Images</router-link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container flex-grow">
+      <div class="col-12">
+        <router-view/>
+      </div>
     </div>
-    <router-view/>
+    <footer class="footer mt-auto bg-dark text-light text-center">
+      <div class="container">
+        All images curtesy of NASA. Space by Flatart from the Noun Project.
+      </div>
+    </footer>
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
